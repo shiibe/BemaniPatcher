@@ -142,7 +142,18 @@
                         patches: [
                             {offset: 0xB1A6B0, off: [0x46, 0x3A, 0x2F], on: [0x2E, 0x2F, 0x2F]}
                         ],
-                    },										
+                    },
+                    {
+                        name: "Increase the Max STAGE Count to 99",
+                        tooltip: "Open Data/x64/testmode/TestMode.xml and change ＮＵＭＢＥＲ ＯＦ ＳＴＡＧＥ（Ｓ）max value to 99, then set the number of max stages in the Test Menu under Game Options to 99.",
+                        patches: [
+                            {offset: 0x092E98, off: [0xE8, 0xB3, 0xF2, 0xFF, 0xFF], on: [0x90, 0x90, 0x90, 0x90, 0x90]},
+                            {offset: 0x092EB1, off: [0xE8, 0xFA, 0xF8, 0xFF, 0xFF], on: [0x90, 0x90, 0x90, 0x90, 0x90]},
+                            {offset: 0x092EB9, off: [0xE8, 0x12, 0xEA, 0x05, 0x00], on: [0x90, 0x90, 0x90, 0x90, 0x90]},
+                            {offset: 0x0E74DA, off: [0x7D, 0x07], on: [0x90, 0x90]},
+                            {offset: 0x0E9EBA, off: [0x7D, 0x07], on: [0x90, 0x90]}
+                        ]
+                    }									
                 ])
             ]);
             });
